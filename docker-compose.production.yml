@@ -1,0 +1,32 @@
+services:
+
+  postgres:
+    extends:
+      file: docker-compose.yml
+      service: postgres
+    restart: always
+    ports: !reset []
+
+
+  app-blue:
+    extends:
+      file: docker-compose.yml
+      service: app-blue
+    restart: always
+
+  app-green:
+    extends:
+      file: docker-compose.yml
+      service: app-green
+    restart: always
+  nginx:
+    extends:
+      file: docker-compose.yml
+      service: nginx
+    restart: always
+
+volumes:
+  postgres:
+
+networks:
+  default:
