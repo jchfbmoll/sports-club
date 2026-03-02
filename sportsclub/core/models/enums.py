@@ -1,5 +1,5 @@
 # core/models/enums.py
-from enum import Enum
+from enum import StrEnum
 
 
 class Discipline(StrEnum):
