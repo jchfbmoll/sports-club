@@ -11,7 +11,7 @@ env:
   # Django
   SECRET_KEY: secret
   DEBUG: "False"
-  ALLOWED_HOSTS: localhost,127.0.0.1,*
+  ALLOWED_HOSTS: localhost,127.0.0.1
   # Database
   POSTGRES_USER: sportsclub
   POSTGRES_PASSWORD: sportsclub
@@ -150,15 +150,15 @@ jobs:
 
       - name: Test API endpoint (blue)
         run: |
-          curl -f http://localhost:8000/blue/api/v1/openapi.json || exit 1
+          curl -f http://localhost:80/blue/api/v1/openapi.json || exit 1
 
       - name: Test API endpoint (green)
         run: |
-          curl -f http://localhost:8000/green/api/v1/openapi.json || exit 1
+          curl -f http://localhost:80/green/api/v1/openapi.json || exit 1
 
       - name: Test main endpoint
         run: |
-          curl -f http://localhost:8000/api/v1/openapi.json || exit 1
+          curl -f http://localhost:80/api/v1/openapi.json || exit 1
 
       - name: Show logs on failure
         if: failure()
