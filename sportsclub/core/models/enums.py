@@ -2,7 +2,7 @@
 from enum import Enum
 
 
-class Discipline(str, Enum):
+class Discipline(StrEnum):
     """Athletic disciplines tracked in competitions."""
 
     SPRINTS = "sprints"
