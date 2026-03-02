@@ -13,12 +13,14 @@ services:
       file: docker-compose.yml
       service: app-blue
     restart: always
+    ports: !reset []
 
   app-green:
     extends:
       file: docker-compose.yml
       service: app-green
     restart: always
+    ports: !reset []
   nginx:
     extends:
       file: docker-compose.yml
