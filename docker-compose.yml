@@ -23,7 +23,6 @@ services:
   app-blue:
     image: jchcifpbj/sportsclub:latest
     build:
-      context: .
       dockerfile: docker/app/Dockerfile
     environment:
       POSTGRES_USER: ${POSTGRES_USER}
@@ -52,7 +51,6 @@ services:
   app-green:
     image: jchcifpbj/sportsclub:latest
     build:
-      context: .
       dockerfile: docker/app/Dockerfile
     environment:
       POSTGRES_USER: ${POSTGRES_USER}
