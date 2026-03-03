@@ -5,7 +5,7 @@ services:
       file: docker-compose.yml
       service: postgres
     restart: always
-
+    ports: !reset []
 
 
   app-blue:
